@@ -1,0 +1,4 @@
+2017-07-05 12:55:53.1542 | DEBUG | ProjectWork.Form1 | Open file 'C:\Users\Искандер\Desktop\Students.xml'
+2017-07-05 12:56:13.9753 | FATAL | ProjectWork.Form1 | Connection to database failed when user tried to fill db
+2017-07-05 13:08:41.1050 | DEBUG | ProjectWork.Form1 | Open file 'C:\Users\Искандер\Desktop\Students.xml'
+2017-07-05 13:08:44.9782 | DEBUG | ProjectWork.Form1 | insert to database '17' rows

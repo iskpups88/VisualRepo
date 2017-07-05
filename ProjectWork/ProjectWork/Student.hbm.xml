@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+	namespace="ProjectWork" assembly="ProjectWork">
+  <class name="Student" table="student">
+    <id name="id" column="id">
+      <generator class="identity"/>
+    </id>
+    <property name="FirstName" column="FirstName"  />
+    <property name="MiddleName" column="MiddleName"  />
+    <property name="LastName" column="LastName"  />
+    <property name="GroupNumber" column="GroupNumber"  />
+    <property name="Email" column="Email"  />
+  </class>
+</hibernate-mapping>
