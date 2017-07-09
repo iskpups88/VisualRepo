@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace ProjectWork
 {
-    class NHibertnateSession
+    public class NHibertnateSession
     {
         public static ISession OpenSession()
         {

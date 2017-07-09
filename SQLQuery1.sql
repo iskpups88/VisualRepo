@@ -1,1 +1,1 @@
-﻿truncate table student;
+﻿truncate table student;	

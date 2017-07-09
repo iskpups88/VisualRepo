@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using NHibernate;
 
 namespace ProjectWork.UnitTests
 {
@@ -7,8 +8,10 @@ namespace ProjectWork.UnitTests
     public class UnitTest1
     {
         [Test]
-        public void TestMethod1()
+        public void does_session_open()
         {
+            ISession session = NHibertnateSession.OpenSession();
+            Assert.IsNotNull(session);
         }
     }
 }

@@ -31,9 +31,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.browse = new System.Windows.Forms.Button();
+            this.load = new System.Windows.Forms.Button();
+            this.getEmails = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
@@ -63,35 +63,35 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Group Number:";
             // 
-            // button1
+            // browse
             // 
-            this.button1.Location = new System.Drawing.Point(648, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 33);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Browse";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.browse.Location = new System.Drawing.Point(648, 33);
+            this.browse.Name = "browse";
+            this.browse.Size = new System.Drawing.Size(96, 33);
+            this.browse.TabIndex = 3;
+            this.browse.Text = "Browse";
+            this.browse.UseVisualStyleBackColor = true;
+            this.browse.Click += new System.EventHandler(this.browse_Click);
             // 
-            // button2
+            // load
             // 
-            this.button2.Location = new System.Drawing.Point(17, 85);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 62);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Load";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.load.Location = new System.Drawing.Point(17, 85);
+            this.load.Name = "load";
+            this.load.Size = new System.Drawing.Size(164, 62);
+            this.load.TabIndex = 4;
+            this.load.Text = "Load";
+            this.load.UseVisualStyleBackColor = true;
+            this.load.Click += new System.EventHandler(this.load_Click);
             // 
-            // button3
+            // getEmails
             // 
-            this.button3.Location = new System.Drawing.Point(17, 234);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 62);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Get Emails";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.getEmails.Location = new System.Drawing.Point(17, 234);
+            this.getEmails.Name = "getEmails";
+            this.getEmails.Size = new System.Drawing.Size(164, 62);
+            this.getEmails.TabIndex = 5;
+            this.getEmails.Text = "Get Emails";
+            this.getEmails.UseVisualStyleBackColor = true;
+            this.getEmails.Click += new System.EventHandler(this.getEmails_Click);
             // 
             // comboBox1
             // 
@@ -117,9 +117,9 @@
             this.ClientSize = new System.Drawing.Size(765, 337);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.getEmails);
+            this.Controls.Add(this.load);
+            this.Controls.Add(this.browse);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -135,9 +135,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button browse;
+        private System.Windows.Forms.Button load;
+        private System.Windows.Forms.Button getEmails;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox listBox1;
     }
