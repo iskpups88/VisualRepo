@@ -10,8 +10,8 @@ namespace ProjectWork.RepositoriesImpl
     {
         void save(List<Student> studentList);
 
-        object getGroup();
+        IList<string> getGroup();
 
-        object getEmail(string currentGroup);
+        IList<string> getEmail(string currentGroup);
     }
 }
