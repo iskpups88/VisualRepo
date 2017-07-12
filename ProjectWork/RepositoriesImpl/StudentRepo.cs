@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace ProjectWork.RepositoriesImpl
 {
-   class StudentRepo : IStudentRepo
+   public class StudentRepo : IStudentRepo
     {
         static private ISession session;
         private Logger logger = LogManager.GetCurrentClassLogger();
@@ -73,6 +73,31 @@ namespace ProjectWork.RepositoriesImpl
                 emailList.Add(item.ToString());
             }
             return emailList;
+        }
+
+        public int getQuantityOfStud(string currentGroup)
+        {
+            session = NHibertnateSession.OpenSession();
+            int n = session.QueryOver<Student>()
+                 .Where(p => p.GroupNumber == currentGroup)
+                 .RowCount();
+
+            session.Close();            
+            return n;
+        }
+
+        public string getMiddleNameStudent(string name)
+        {
+            session = NHibertnateSession.OpenSession();
+            var query = session.QueryOver<Student>()
+                             .Where(p => p.FirstName == name)
+                             .SelectList(list => list.Select(Projections.Distinct(Projections.Property<Student>(p => p.LastName)))
+                             )
+                             .List<object>();
+
+            string lastName = query[0].ToString();
+            session.Close();
+            return lastName;
         }
     }
 }

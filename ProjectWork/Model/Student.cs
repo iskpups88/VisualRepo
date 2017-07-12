@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectWork
 {
-    class Student
+    public class Student
     {
         public virtual int id { get; protected set; }
         public virtual string FirstName { get; set;}

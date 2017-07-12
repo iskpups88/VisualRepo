@@ -13,5 +13,7 @@ namespace ProjectWork.RepositoriesImpl
         IList<string> getGroup();
 
         IList<string> getEmail(string currentGroup);
+
+        string getMiddleNameStudent(string name);
     }
 }
