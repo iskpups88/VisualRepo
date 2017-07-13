@@ -25,6 +25,10 @@ namespace ProjectWork.Utils
                     GroupNumber = d.Element("GroupNumber").Value,
                     Email = d.Element("Email").Value
                 }).ToList();
+                if(studentList.Count == 0)
+                {
+                    throw new XmlException();
+                }
             }
             catch (XmlException e)
             {
