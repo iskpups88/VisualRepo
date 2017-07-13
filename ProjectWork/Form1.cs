@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using NLog;
 using System.Xml;
-using System.Data.SqlClient;
 using ProjectWork.RepositoriesImpl;
 using ProjectWork.Utils;
 
@@ -20,8 +19,7 @@ namespace ProjectWork
             InitializeComponent();
             logger = LogManager.GetCurrentClassLogger();
             studRepo = new StudentRepo();
-            load.Enabled = false;
-         
+            load.Enabled = false;         
         }
 
         private void browse_Click(object sender, EventArgs e)
@@ -37,8 +35,7 @@ namespace ProjectWork
                 studentList = XmlParser.parse(openFile.FileName);
                 load.Enabled = true;
                 getEmails.Enabled = true;
-                groupNumberBox.Enabled = true;
-                
+                groupNumberBox.Enabled = true;                
 
             }
             catch (XmlException)
@@ -48,38 +45,21 @@ namespace ProjectWork
                 load.Enabled = false;
                 getEmails.Enabled = false;
                 groupNumberBox.Enabled = false;
-            }
-            
+            }            
         }
 
         private void load_Click(object sender, EventArgs e)
         {
-            try
-            {
                 studRepo.save(studentList);
                 groupNumberBox.DataSource = studRepo.getGroup();
                 MessageBox.Show("Successful!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 logger.Info("File downloaded");
-                studRepo.getMiddleNameStudent("Искандер");
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Connection to database failed", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                logger.Error("Connection to database failed when user tried to fill db");
-            }
+                studRepo.getMiddleNameStudent("Искандер");                  
         }
 
         private void getEmails_Click(object sender, EventArgs e)
         {
-            try
-            {
-                emailsBox.DataSource = studRepo.getEmail((string)groupNumberBox.SelectedValue);
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Connection to database failed", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                logger.Error("Connection to database failed when user tried to get group");
-            }
+                emailsBox.DataSource = studRepo.getEmail((string)groupNumberBox.SelectedValue);            
         }
     }
 }
