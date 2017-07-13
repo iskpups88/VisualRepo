@@ -53,8 +53,7 @@ namespace ProjectWork
                 studRepo.save(studentList);
                 groupNumberBox.DataSource = studRepo.getGroup();
                 MessageBox.Show("Successful!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                logger.Info("File downloaded");
-                studRepo.getMiddleNameStudent("Искандер");                  
+                logger.Info("File downloaded");                 
         }
 
         private void getEmails_Click(object sender, EventArgs e)
